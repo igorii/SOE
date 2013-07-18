@@ -1,4 +1,5 @@
-main = putStrLn "Geometry Package"
+main = let a = Rectangle 5 5
+       in print (area a)
 
 data Shape = Rectangle Side Side
            | Ellipse Radius Radius
