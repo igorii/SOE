@@ -1,8 +1,7 @@
 import Control.Parallel
 
-main = a `par` b `par` c `pseq` print (a + b + c)
-    where a = ack 3 10
-          b = fac 42
+main = b `par` c `pseq` print (b + c)
+    where b = fac 42
           c = fib 34
 
 fac 0 = 1

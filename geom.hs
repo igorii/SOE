@@ -1,4 +1,4 @@
-module Geom
+main = putStrLn "Geometry Package"
 
 data Shape = Rectangle Side Side
            | Ellipse Radius Radius
@@ -6,7 +6,7 @@ data Shape = Rectangle Side Side
            | Polygon [Vertex]
     deriving Show
 
-triArea            :: Vertex -> Vertex -> Float
+triArea            :: Vertex -> Vertex -> Vertex -> Float
 triArea v1 v2 v3   = let a = distBetween v1 v2
                          b = distBetween v2 v3
                          c = distBetween v3 v1
@@ -16,6 +16,9 @@ triArea v1 v2 v3   = let a = distBetween v1 v2
 type Radius = Float
 type Side   = Float
 type Vertex = (Float, Float)
+
+distBetween                  :: Vertex -> Vertex -> Float
+distBetween (x1,y1) (x2,y2)  = sqrt ( (x1 - x2)^2 + (y1 - y2)^2 )
 
 area                      :: Shape -> Float
 area (Rectangle s1 s2)    = s1 * s2
