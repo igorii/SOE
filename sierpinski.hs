@@ -1,5 +1,3 @@
-module Main where
-
 import SOE
 
 fillTri :: Window -> Int -> Int -> Int -> IO ()
