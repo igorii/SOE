@@ -1,5 +1,4 @@
-main = let a = Rectangle 5 5
-       in print (area a)
+module Geom where
 
 data Shape = Rectangle Side Side
            | Ellipse Radius Radius
